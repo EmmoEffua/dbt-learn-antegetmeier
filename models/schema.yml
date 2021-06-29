@@ -1,5 +1,12 @@
 version: 2
 
+sources:
+  - name: pivot_source_as_it
+    database: ANALYTICS
+    schema: DBT_ANTEGETMEIER
+    tables:
+      - pivot_src
+
 models:
   - name: customers
     description: One record per customer

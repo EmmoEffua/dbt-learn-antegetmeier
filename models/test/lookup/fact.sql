@@ -28,5 +28,6 @@ select
     , (select nvl(max(dpa.customer_name_vp), '') from dpa where dpa.insurance_number = src.insurance_number) partner_vp_name 
     , (select nvl(max(dpa.customer_name_vn), '') from dpa where dpa.insurance_number = src.insurance_number) partner_vn_name 
     , (select nvl(max(dpa.customer_name_za), '') from dpa where dpa.insurance_number = src.insurance_number) partner_za_name 
+    , to_date(bearb_dat, 'YYYYMMDD') bearbeitungsdatum
     , rate
 from src

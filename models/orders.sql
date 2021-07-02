@@ -1,3 +1,7 @@
+{{ config(
+    materialized="table"
+) }}
+
 with 
   stg_orders as (
     select customer_id, order_id  
